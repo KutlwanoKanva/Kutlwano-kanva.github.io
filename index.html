@@ -9,6 +9,8 @@
 </head>
 <body>
   <header>
+    <img src="images/profile.jpg" alt="Portrait of Kutlwano Kanva"
+         style="width:160px; height:160px; object-fit:cover; border-radius:50%; margin-bottom:1rem; border:3px solid #ffd700;">
     <h1 class="hover-name">Hi, I'm Kutlwano 👋</h1>
     <p>Junior Data Analyst in Progress | Exploring Python, SQL & Power BI</p>
   </header>
@@ -32,6 +34,35 @@
         <strong>Financial Dashboard</strong> – 
         <a href="https://github.com/KutlwanoKanva/Portfolio/tree/main/financial-dashboard">View on GitHub</a><br>
         <small>Power BI dashboard – learning to visualize revenue, expenses, and profit trends.</small>
+
+        <!-- Dashboard placeholder -->
+        <div class="dash-placeholder">
+          <div class="kpi">
+            <div class="kpi-label">Revenue</div>
+            <div class="kpi-value">R 1.2M</div>
+            <div class="kpi-delta up">▲ 12% MoM</div>
+          </div>
+          <div class="kpi">
+            <div class="kpi-label">Expenses</div>
+            <div class="kpi-value">R 720k</div>
+            <div class="kpi-delta down">▼ 3% MoM</div>
+          </div>
+          <div class="kpi">
+            <div class="kpi-label">Profit</div>
+            <div class="kpi-value">R 480k</div>
+            <div class="kpi-delta up">▲ 8% MoM</div>
+          </div>
+
+          <div class="chart-area" aria-hidden="true">
+            <svg viewBox="0 0 400 160" preserveAspectRatio="none">
+              <polyline fill="none" stroke="#00aaff" stroke-width="3"
+                points="10,120 60,100 110,110 160,80 210,90 260,60 310,70 390,40"/>
+              <polyline fill="rgba(255,215,0,0.15)" stroke="#ffd700" stroke-width="2"
+                points="10,130 60,110 110,105 160,90 210,95 260,80 310,85 390,70"/>
+            </svg>
+            <span class="chart-note">Preview • Work in progress</span>
+          </div>
+        </div>
       </li>
       <li>
         <strong>Sales Data Analysis</strong> – 
@@ -41,19 +72,19 @@
     </ul>
   </section>
 
- <section id="skills">
-  <h2>Skills I’m Building</h2>
-  <ul style="display:flex; flex-wrap:wrap; gap:0.5rem; list-style:none; padding:0; margin:0;">
-    <li style="background:#262626; border:1px solid #213a4a; color:#f5f5f5; padding:0.4rem 0.6rem; border-radius:6px;">SQL</li>
-    <li style="background:#262626; border:1px solid #213a4a; color:#f5f5f5; padding:0.4rem 0.6rem; border-radius:6px;">Web Dev Basics</li>
-    <li style="background:#262626; border:1px solid #213a4a; color:#f5f5f5; padding:0.4rem 0.6rem; border-radius:6px;">Python</li>
-    <li style="background:#262626; border:1px solid #213a4a; color:#f5f5f5; padding:0.4rem 0.6rem; border-radius:6px;">Power BI</li>
-    <li style="background:#262626; border:1px solid #213a4a; color:#f5f5f5; padding:0.4rem 0.6rem; border-radius:6px;">Coding</li>
-  </ul>
-  <p style="margin-top:0.75rem; font-size:0.9rem; color:#ccc;">
-    These are the core skills I’m currently learning and practicing through projects.
-  </p>
-</section>
+  <section id="skills">
+    <h2>Skills I’m Building</h2>
+    <ul style="display:flex; flex-wrap:wrap; gap:0.5rem; list-style:none; padding:0; margin:0;">
+      <li style="background:#262626; border:1px solid #213a4a; color:#f5f5f5; padding:0.4rem 0.6rem; border-radius:6px;">SQL</li>
+      <li style="background:#262626; border:1px solid #213a4a; color:#f5f5f5; padding:0.4rem 0.6rem; border-radius:6px;">Web Dev Basics</li>
+      <li style="background:#262626; border:1px solid #213a4a; color:#f5f5f5; padding:0.4rem 0.6rem; border-radius:6px;">Python</li>
+      <li style="background:#262626; border:1px solid #213a4a; color:#f5f5f5; padding:0.4rem 0.6rem; border-radius:6px;">Power BI</li>
+      <li style="background:#262626; border:1px solid #213a4a; color:#f5f5f5; padding:0.4rem 0.6rem; border-radius:6px;">Coding</li>
+    </ul>
+    <p style="margin-top:0.75rem; font-size:0.9rem; color:#ccc;">
+      These are the core skills I’m currently learning and practicing through projects.
+    </p>
+  </section>
 
   <section id="contact">
     <h2>Contact</h2>
