@@ -31,6 +31,22 @@ h1, h2 {
   color: #ffd700; /* gold */
 }
 
+h2 {
+  position: relative;
+  padding-bottom: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+h2::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 60px;
+  height: 3px;
+  background-color: #ffd700;
+}
+
 /* Links */
 a {
   color: #00aaff;
@@ -71,7 +87,7 @@ footer {
   font-size: 0.9rem;
 }
 
-/* Hover Animation on Name */
+/* Hover animation on name */
 .hover-name {
   transition: all 0.3s ease;
 }
@@ -82,20 +98,132 @@ footer {
   transform: scale(1.05);
 }
 
-/* Gold Underline for Section Titles */
-h2 {
-  position: relative;
-  padding-bottom: 0.5rem;
-  margin-bottom: 1rem;
-  color: #ffd700;
+/* General image defaults */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
 }
 
-h2::after {
-  content: '';
+/* Dashboard placeholder card */
+.dash-placeholder {
+  margin-top: 1rem;
+  background: #0f1a22;
+  border: 1px solid #213a4a;
+  border-radius: 10px;
+  padding: 1rem;
+}
+
+.dash-placeholder .kpi {
+  background: #16232b;
+  border-radius: 8px;
+  padding: 0.75rem;
+  margin-bottom: 0.75rem;
+}
+
+.dash-placeholder .kpi-label {
+  color: #9bd4ff;
+  font-weight: 700;
+  font-size: 0.9rem;
+}
+
+.dash-placeholder .kpi-value {
+  color: #ffd700;
+  font-size: 1.35rem;
+  margin-top: 0.25rem;
+}
+
+.dash-placeholder .kpi-delta {
+  font-size: 0.9rem;
+  margin-top: 0.15rem;
+}
+
+.dash-placeholder .kpi-delta.up { color: #8bc34a; }
+.dash-placeholder .kpi-delta.down { color: #e57373; }
+
+/* Layout for KPI cards */
+@media (min-width: 640px) {
+  .dash-placeholder {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1rem;
+  }
+  .dash-placeholder .kpi {
+    margin: 0;
+  }
+  .dash-placeholder .chart-area {
+    grid-column: 1 / -1;
+  }
+}
+
+/* Fake chart */
+.chart-area {
+  position: relative;
+  height: 180px;
+  border-radius: 8px;
+  background: linear-gradient(90deg, #0d2230, #0f1a22);
+  margin-top: 0.5rem;
+  overflow: hidden;
+  border: 1px solid #213a4a;
+}
+
+.chart-area::before,
+.chart-area::after {
+  content: "";
   position: absolute;
-  left: 0;
-  bottom: 0;
-  width: 60px;
-  height: 3px;
-  background-color: #ffd700;
+  left: 10px; right: 10px;
+  height: 2px;
+  background: #213a4a;
+  opacity: 0.9;
+}
+
+.chart-area::before { top: 14px; }
+.chart-area::after { bottom: 14px; }
+
+.chart-area svg {
+  position: absolute;
+  inset: 0;
+}
+
+.chart-note {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  color: #9bd4ff;
+  font-size: 0.8rem;
+  background: rgba(15, 26, 34, 0.7);
+  padding: 0.2rem 0.4rem;
+  border-radius: 4px;
+  border: 1px solid #213a4a;
+}
+
+/* Contact buttons */
+.btn-icon {
+  background:#1a1a1a;
+  border:1px solid #213a4a;
+  color:#00aaff;
+  padding:0.5rem 0.75rem;
+  border-radius:8px;
+  display:inline-flex;
+  align-items:center;
+  gap:0.5rem;
+  transition:transform 0.2s ease, border-color 0.2s ease, color 0.2s ease;
+  text-decoration:none;
+  font-size:0.95rem;
+}
+
+.btn-icon:hover {
+  color:#ffd700;
+  border-color:#ffd700;
+  transform:translateY(-2px);
+}
+
+/* Mobile tweaks */
+@media (max-width: 600px) {
+  header { padding: 1.5rem; }
+  header img { width: 120px; height: 120px; }
+  section { margin: 1rem; padding: 1.25rem; }
+  h1 { font-size: 1.75rem; }
+  h2 { font-size: 1.25rem; }
+  li { padding: 0.75rem; }
 }
